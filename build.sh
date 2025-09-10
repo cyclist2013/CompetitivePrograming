@@ -5,8 +5,8 @@ BUILD_TYPE="Release"
 
 # Parse command line arguments
 if [ "$1" == "clean" ]; then
-    echo "Cleaning build and bin directories..."
-    rm -rf build bin
+    echo "Cleaning .build and bin directories..."
+    rm -rf .build bin
     echo "Clean complete."
     exit 0
 elif [ "$1" == "debug" ]; then
@@ -20,8 +20,8 @@ else
 fi
 
 # Create build directory if it does not exist
-mkdir -p build
-cd build
+mkdir -p .build
+cd .build
 
 # Run CMake with build type
 cmake -DCMAKE_BUILD_TYPE=${BUILD_TYPE} ..

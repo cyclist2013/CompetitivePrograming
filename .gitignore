@@ -34,3 +34,4 @@
 # Bin and build directories
 bin
 build
+.build
